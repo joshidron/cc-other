@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn Colors</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans Gujarati', sans-serif;
+      background: linear-gradient(to top right, #fff7e6, #ffcc80);
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #8e24aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    .main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .output-box {
+      padding: 20px;
+      font-size: 24px;
+      background: #f3e5f5;
+      border: 2px solid #ce93d8;
+      border-radius: 10px;
+      text-align: center;
+      color: #6a1b9a;
+      margin-bottom: 30px;
+    }
+
+    .colors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+    }
+
+    .color-box {
+      padding: 15px;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .color-box.active {
+      outline: 4px solid #fff;
+      box-shadow: 0 0 12px #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">🎨 Learn Colors</div>
+  <div class="main">
+    <div class="output-box" id="output">Click or Type a Color</div>
+    <div class="colors" id="colors"></div>
+  </div>
+
+  <script>
+    const colors = [
+      { name: 'Red', hex: '#e53935' },
+      { name: 'Green', hex: '#43a047' },
+      { name: 'Blue', hex: '#1e88e5' },
+      { name: 'Yellow', hex: '#fdd835' },
+      { name: 'Orange', hex: '#fb8c00' },
+      { name: 'Pink', hex: '#d81b60' },
+      { name: 'Purple', hex: '#8e24aa' },
+      { name: 'Brown', hex: '#6d4c41' },
+      { name: 'Black', hex: '#000000' },
+      { name: 'White', hex: '#bdbdbd' },
+      { name: 'Gray', hex: '#757575' },
+      { name: 'Cyan', hex: '#00bcd4' },
+      { name: 'Magenta', hex: '#ff00ff' },
+      { name: 'Violet', hex: '#9c27b0' },
+      { name: 'Indigo', hex: '#3f51b5' },
+      { name: 'Maroon', hex: '#800000' },
+      { name: 'Teal', hex: '#008080' },
+      { name: 'Lime', hex: '#cddc39' },
+      { name: 'Olive', hex: '#808000' },
+      { name: 'Navy', hex: '#000080' },
+      { name: 'Gold', hex: '#ffd700' },
+      { name: 'Silver', hex: '#c0c0c0' },
+      { name: 'Peach', hex: '#ffccbc' },
+      { name: 'Coral', hex: '#ff7f50' },
+      { name: 'Beige', hex: '#f5f5dc' },
+      { name: 'Aqua', hex: '#00ffff' },
+      { name: 'Sky Blue', hex: '#87ceeb' }
+    ];
+
+    const colorDiv = document.getElementById('colors');
+    const output = document.getElementById('output');
+
+    function speak(text) {
+      const synth = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      synth.cancel();
+      synth.speak(utterance);
+    }
+
+    colors.forEach(({ name, hex }) => {
+      const box = document.createElement('div');
+      box.className = 'color-box';
+      box.style.backgroundColor = hex;
+      box.textContent = name;
+      box.dataset.name = name.toLowerCase();
+      box.addEventListener('click', () => handleColor(name));
+      colorDiv.appendChild(box);
+    });
+
+    function handleColor(name) {
+      const spelling = name.toUpperCase().split('').join(' ');
+      const msg = `${name} Spelled as: ${spelling}`;
+      output.textContent = msg;
+      speak(`${name}. Spelled as: ${spelling}`);
+
+      document.querySelectorAll('.color-box').forEach(box => {
+        box.classList.toggle('active', box.textContent === name);
+      });
+    }
+
+    // Keyboard support
+    let typedColor = '';
+    let typingTimer;
+
+    document.addEventListener('keydown', (e) => {
+      if (!/^[a-zA-Z ]$/.test(e.key)) return;
+      typedColor += e.key.toLowerCase();
+
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(() => {
+        const match = colors.find(c => c.name.toLowerCase() === typedColor.trim());
+        if (match) {
+          handleColor(match.name);
+        } else {
+          output.textContent = `Color "${typedColor}" not found`;
+        }
+        typedColor = '';
+      }, 700);
+    });
+  </script>
+</body>
+</html>

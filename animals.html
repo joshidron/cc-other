@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Animals</title>
+  <link rel="stylesheet" href="css/animals.css" />
+  <script>
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.cancel(); // stop previous speech
+        speechSynthesis.speak(utterance);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="card-container" id="cardContainer"></div>
+
+  <script>
+    const animals = [
+      "Lion", "Elephant", "Tiger", "Bear", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Panda", "Wolf",
+      "Fox", "Rabbit", "Deer", "Crocodile", "Hippopotamus", "Rhinoceros", "Leopard", "Cheetah", "Ostrich", "Eagle",
+      "Parrot", "Peacock", "Penguin", "Dolphin", "Shark", "Whale", "Octopus", "Seal", "Walrus", "Bat",
+      "Camel", "Llama", "Otter", "Sloth", "Antelope", "Goat", "Sheep", "Cow", "Pig", "Horse",
+      "Chicken", "Duck", "Goose", "Turkey", "Swan", "Frog", "Toad", "Turtle", "Snake", "Chameleon"
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.getElementById("cardContainer");
+      animals.forEach((animal, index) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.addEventListener("mouseenter", () => {
+          setTimeout(() => speak(animal), 1000);
+        });
+
+        card.innerHTML = `
+          <div class="image_container">
+            <img src="https://source.unsplash.com/300x200/?animal,${animal}&sig=${index}" alt="${animal}" class="animal-image" title="${animal}">
+          </div>
+          <div class="title"><span>${animal}</span></div>
+          <button class="cart-button"><span>Sound of the animal</span></button>
+        `;
+
+        container.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>

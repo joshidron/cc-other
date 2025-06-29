@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Animals</title>
+  <link rel="stylesheet" href="css/animals.css" />
+  <script>
+    function speak(text) {
+      if ('speechSynthesis' in window) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="card-container">
+
+    <div class="card" onmouseenter="setTimeout(() => speak('Lion'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Lion&sig=0" alt="Lion" class="animal-image">
+      </div>
+      <div class="title"><span>Lion</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Elephant'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Elephant&sig=1" alt="Elephant" class="animal-image">
+      </div>
+      <div class="title"><span>Elephant</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Tiger'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Tiger&sig=2" alt="Tiger" class="animal-image">
+      </div>
+      <div class="title"><span>Tiger</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Bear'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Bear&sig=3" alt="Bear" class="animal-image">
+      </div>
+      <div class="title"><span>Bear</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Giraffe'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Giraffe&sig=4" alt="Giraffe" class="animal-image">
+      </div>
+      <div class="title"><span>Giraffe</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Zebra'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Zebra&sig=5" alt="Zebra" class="animal-image">
+      </div>
+      <div class="title"><span>Zebra</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Monkey'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Monkey&sig=6" alt="Monkey" class="animal-image">
+      </div>
+      <div class="title"><span>Monkey</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Kangaroo'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Kangaroo&sig=7" alt="Kangaroo" class="animal-image">
+      </div>
+      <div class="title"><span>Kangaroo</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Panda'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Panda&sig=8" alt="Panda" class="animal-image">
+      </div>
+      <div class="title"><span>Panda</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Wolf'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Wolf&sig=9" alt="Wolf" class="animal-image">
+      </div>
+      <div class="title"><span>Wolf</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Fox'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Fox&sig=10" alt="Fox" class="animal-image">
+      </div>
+      <div class="title"><span>Fox</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Rabbit'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Rabbit&sig=11" alt="Rabbit" class="animal-image">
+      </div>
+      <div class="title"><span>Rabbit</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Deer'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Deer&sig=12" alt="Deer" class="animal-image">
+      </div>
+      <div class="title"><span>Deer</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Crocodile'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Crocodile&sig=13" alt="Crocodile" class="animal-image">
+      </div>
+      <div class="title"><span>Crocodile</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Hippopotamus'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Hippopotamus&sig=14" alt="Hippopotamus" class="animal-image">
+      </div>
+      <div class="title"><span>Hippopotamus</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Rhinoceros'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Rhinoceros&sig=15" alt="Rhinoceros" class="animal-image">
+      </div>
+      <div class="title"><span>Rhinoceros</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Leopard'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Leopard&sig=16" alt="Leopard" class="animal-image">
+      </div>
+      <div class="title"><span>Leopard</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Cheetah'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Cheetah&sig=17" alt="Cheetah" class="animal-image">
+      </div>
+      <div class="title"><span>Cheetah</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Ostrich'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Ostrich&sig=18" alt="Ostrich" class="animal-image">
+      </div>
+      <div class="title"><span>Ostrich</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Eagle'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Eagle&sig=19" alt="Eagle" class="animal-image">
+      </div>
+      <div class="title"><span>Eagle</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Parrot'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Parrot&sig=20" alt="Parrot" class="animal-image">
+      </div>
+      <div class="title"><span>Parrot</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Peacock'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Peacock&sig=21" alt="Peacock" class="animal-image">
+      </div>
+      <div class="title"><span>Peacock</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Penguin'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Penguin&sig=22" alt="Penguin" class="animal-image">
+      </div>
+      <div class="title"><span>Penguin</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Dolphin'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Dolphin&sig=23" alt="Dolphin" class="animal-image">
+      </div>
+      <div class="title"><span>Dolphin</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Shark'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Shark&sig=24" alt="Shark" class="animal-image">
+      </div>
+      <div class="title"><span>Shark</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Whale'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Whale&sig=25" alt="Whale" class="animal-image">
+      </div>
+      <div class="title"><span>Whale</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Octopus'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Octopus&sig=26" alt="Octopus" class="animal-image">
+      </div>
+      <div class="title"><span>Octopus</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Seal'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Seal&sig=27" alt="Seal" class="animal-image">
+      </div>
+      <div class="title"><span>Seal</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Walrus'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Walrus&sig=28" alt="Walrus" class="animal-image">
+      </div>
+      <div class="title"><span>Walrus</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Bat'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Bat&sig=29" alt="Bat" class="animal-image">
+      </div>
+      <div class="title"><span>Bat</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Camel'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Camel&sig=30" alt="Camel" class="animal-image">
+      </div>
+      <div class="title"><span>Camel</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Llama'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Llama&sig=31" alt="Llama" class="animal-image">
+      </div>
+      <div class="title"><span>Llama</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Otter'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Otter&sig=32" alt="Otter" class="animal-image">
+      </div>
+      <div class="title"><span>Otter</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Sloth'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Sloth&sig=33" alt="Sloth" class="animal-image">
+      </div>
+      <div class="title"><span>Sloth</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Antelope'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Antelope&sig=34" alt="Antelope" class="animal-image">
+      </div>
+      <div class="title"><span>Antelope</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Goat'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Goat&sig=35" alt="Goat" class="animal-image">
+      </div>
+      <div class="title"><span>Goat</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Sheep'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Sheep&sig=36" alt="Sheep" class="animal-image">
+      </div>
+      <div class="title"><span>Sheep</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Cow'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Cow&sig=37" alt="Cow" class="animal-image">
+      </div>
+      <div class="title"><span>Cow</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Pig'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Pig&sig=38" alt="Pig" class="animal-image">
+      </div>
+      <div class="title"><span>Pig</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Horse'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Horse&sig=39" alt="Horse" class="animal-image">
+      </div>
+      <div class="title"><span>Horse</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Chicken'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Chicken&sig=40" alt="Chicken" class="animal-image">
+      </div>
+      <div class="title"><span>Chicken</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Duck'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Duck&sig=41" alt="Duck" class="animal-image">
+      </div>
+      <div class="title"><span>Duck</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Goose'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Goose&sig=42" alt="Goose" class="animal-image">
+      </div>
+      <div class="title"><span>Goose</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Turkey'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Turkey&sig=43" alt="Turkey" class="animal-image">
+      </div>
+      <div class="title"><span>Turkey</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Swan'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Swan&sig=44" alt="Swan" class="animal-image">
+      </div>
+      <div class="title"><span>Swan</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Frog'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Frog&sig=45" alt="Frog" class="animal-image">
+      </div>
+      <div class="title"><span>Frog</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Toad'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Toad&sig=46" alt="Toad" class="animal-image">
+      </div>
+      <div class="title"><span>Toad</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Turtle'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Turtle&sig=47" alt="Turtle" class="animal-image">
+      </div>
+      <div class="title"><span>Turtle</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Snake'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Snake&sig=48" alt="Snake" class="animal-image">
+      </div>
+      <div class="title"><span>Snake</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+    <div class="card" onmouseenter="setTimeout(() => speak('Chameleon'), 1000)">
+      <div class="image_container">
+        <img src="https://source.unsplash.com/300x200/?animal,Chameleon&sig=49" alt="Chameleon" class="animal-image">
+      </div>
+      <div class="title"><span>Chameleon</span></div>
+      <button class="cart-button"><span>Sound of the animal</span></button>
+    </div>
+    
+  </div>
+</body>
+</html>
